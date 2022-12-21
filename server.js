@@ -4,9 +4,10 @@ const { urlencoded } = require('express')
 const express = require('express')
 const ejs = require('ejs')
 const app = express()
+const mongodb_uri = 'mongodb+srv://Team_8:IEEE_Team_8@cluster0.8yckj9s.mongodb.net/?retryWrites=true&w=majority'
 
 mongoose.set('strictQuery', true)
-mongoose.connect(process.env.DATABASE_URL)
+mongoose.connect(mongodb_uri)
 const db = mongoose.connection
 db.on('error', (error) => console.error(error))
 db.once('open', () => console.error('connected to database'))
