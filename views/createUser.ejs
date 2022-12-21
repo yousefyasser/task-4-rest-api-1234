@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" 
+        crossorigin="anonymous">
+        <title>Document</title>
+        <style>
+            body {
+                text-align: center;
+            }
+            form {
+                display: inline-block;
+                margin-top: 200px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 class="mb-4">Create new User</h1>
+        <form action="/users" method="POST">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input required type="text" class="form-control" name="name" id="name" placeholder="Name">
+            </div>
+            <div class="form-group">
+              <label for="email">Email address</label>
+              <input required type="text" class="form-control" name="email" id="email" placeholder="Enter email">
+            </div>
+            <div class="form-group">
+              <label for="number">Phone Number</label>
+              <input required type="text" class="form-control" name="phoneNumber" id="phoneNumber" placeholder="Phone Number">
+            </div>
+
+            <a href="/" class="btn btn-secondary">Cancel</a>
+            <button type="submit" class="btn btn-primary">Save</button>
+        </form>
+    </body>
+</html>
